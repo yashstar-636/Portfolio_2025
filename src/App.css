@@ -60,12 +60,18 @@ html {
 }
 nav {
   padding: 0px 20px 5px;
-  background: var(--green-colors);
+  background: linear-gradient(
+    200deg,
+    rgb(81, 224, 202),
+    rgb(69, 194, 164),
+    rgb(253, 0, 253)
+  );
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-size: 17px;
   position: sticky;
+  box-shadow: rgb(134, 215, 250) 0px 4px 20px 0px;
 }
 h2 {
   text-align: center;
@@ -106,7 +112,7 @@ a {
 }
 .header-section {
   padding: 10px 0px;
-  background-color: var(--black-color);
+  background: linear-gradient(127deg, #20230a, #000000, #02a3a5);
 }
 .header-container {
   display: grid;
@@ -121,11 +127,12 @@ a {
   padding: 40px 20px;
 }
 .header-right img {
-  height: 32rem;
   border-radius: 100%;
-  width: 32rem;
+  width: 20rem;
+  margin-left: 30%;
   background-image: radial-gradient(var(--green-color) 5px, #e5e5f700 5px);
   background-size: 10px 10px;
+  box-shadow: rgb(51, 36, 49) 0px 0px 50px 5px;
 }
 .header-left h4 b {
   color: var(--green-color);
@@ -191,17 +198,24 @@ strong {
   }
 }
 .about {
-  background: var(--black-shade);
+  background: linear-gradient(110deg, #02a3a5, #000000, #20230a);
   color: white;
+  box-shadow: rgb(39, 196, 177) -10px -10px 40px 30px;
+  animation-timeline: view();
+  animation: slide-in-left 2s ease forwards;
 }
 .about-container {
   padding: 80px 20px;
   display: grid;
   grid-template-columns: 40% 60%;
   align-items: center;
+  animation-timeline: view();
+  animation: slide-in-left 2s ease forwards;
 }
 .about-left img {
   width: 100%;
+  animation-timeline: view();
+  animation: slide-in-left 2s ease forwards;
 }
 ul {
   display: flex;
@@ -216,7 +230,24 @@ ul {
 .about-right {
   display: flex;
   flex-direction: column;
+  animation-timeline: view();
+  animation: slide-in-left 2s ease forwards;
 }
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-130%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.about-right p {
+  align-items: center;
+  animation-timeline: view();
+}
+
 .study-details li {
   display: flex;
   background-color: var(--green-color);
@@ -250,6 +281,17 @@ ul {
   border: 2px solid var(--green-color);
   &:hover {
     background: var(--green-color);
+    animation: skill-hover 0.5s ease forwards;
+  }
+}
+@keyframes skill-hover {
+  from {
+    background: var(--white-color);
+    scale: 1;
+  }
+  to {
+    background: var(--green-color);
+    scale: 1.2;
   }
 }
 .skill {
@@ -272,6 +314,18 @@ h2 {
   color: var(--green-color);
   font-weight: 700;
   letter-spacing: 3px;
+  animation-timeline: view();
+  animation: drag 5s ease forwards;
+}
+@keyframes drag {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 .html {
   width: 85%;
@@ -293,6 +347,7 @@ h2 {
   width: 50%;
   background-color: var(--green-color);
 }
+
 .tech {
   width: 80%;
   background-color: var(--green-color);
@@ -352,7 +407,7 @@ h2 {
 textarea {
   padding: 8px;
   width: 40%;
-  background-color: #08d665;
+  background-color: var(--black-shade);
   color: white;
   font-weight: 500;
   font-size: 1rem;

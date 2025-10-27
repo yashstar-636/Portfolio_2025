@@ -43,7 +43,7 @@ const Header = () => {
             </li>
             <li>
               <a
-                href="https://www.instagram.com/yxsh_rxthod666/"
+                href="https://www.instagram.com/yash_rathod636/"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -51,6 +51,9 @@ const Header = () => {
               </a>
             </li>
           </div>
+          <a href="Yash's Resume.docx" download>
+            <button class="btn">Download CV</button>
+          </a>
         </div>
         <div className="header-right">
           <img src={profile} alt="Yash Rathod" />

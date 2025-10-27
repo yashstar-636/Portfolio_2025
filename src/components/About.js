@@ -1,12 +1,13 @@
 import React from "react";
 import "../App.css";
+import image from "../Photos/image.png";
 
 const About = () => {
   return (
     <section class="about" id="about">
       <div class="about-container">
         <div class="about-left">
-          <img src="image.png" alt="" />
+          <img src={image} alt="" />
         </div>
         <div class="about-right">
           <h2>About Me</h2>
@@ -21,8 +22,9 @@ const About = () => {
             pursuing a <strong>BScIT</strong>, honing my skills in{" "}
             <strong>full-stack development</strong>. My goal is to build
             impactful digital experiences while constantly
-            <strong>learning and growing</strong> in the field.
+            <strong> learning and growing</strong> in the field.{" "}
           </p>
+
           <div class="list">
             <h1>Education Detail</h1>
             <ul class="study-details">

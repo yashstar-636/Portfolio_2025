@@ -1,7 +1,9 @@
-import React from "react";
+import React, { use } from "react";
 import "../App.css";
+import { useNavigate } from "react-router-dom";
 
 function Contact() {
+  const navigation = useNavigate();
   return (
     <section class="contact" id="contact">
       <div class="contact-container">
@@ -20,7 +22,11 @@ function Contact() {
             id=""
             required
           ></textarea>
-          <button class="btn" type="submit">
+          <button
+            class="btn"
+            onClick={() => navigation("/travel")}
+            type="submit"
+          >
             Submit
           </button>
         </form>
